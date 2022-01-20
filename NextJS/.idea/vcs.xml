@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/hellow-world" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/next-pre-rendering" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/next-route" vcs="Git" />
+  </component>
+</project>

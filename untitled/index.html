@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>react playground</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+  .box {
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .box--small {
+    width: 90px;
+    height: 90px;
+  }
+
+  .box--medium {
+    width: 180px;
+    height: 180px;
+  }
+
+  .box--large {
+    width: 270px;
+    height: 270px;
+  }
+
+</style>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+<script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+<script src="https://unpkg.com/react-error-boundary@1.2.5/dist/umd/react-error-boundary.js"></script>
+<script type="text/babel">
+  const root = document.getElementById('root');
+
+  // const element = React.createElement('div', {
+  //   children: React.createElement('span',null,'hellow',' world'),
+  //   className: 'container'
+  // });
+
+  // const children = 'more hellow';
+  // const className = 'container';
+  // const props = {children, className};
+  // // const element = <div id="app-root" {...props} className="nit"/>
+  // const hellowElement = React.createElement('span', null, 'hellow')
+  // const worldElement = React.createElement('span', null, ' world')
+  // const element = React.createElement(
+  //   React.Fragment,
+  //   null,
+  //   hellowElement,
+  //   worldElement
+  // )
+  //   const Message = props => <div className="message">{props.children}</div>
+  //   function SayHellow({firstName, lastName}){
+  //     return(
+  //       <div>
+  //         Hellow {firstName} {lastName} !
+  //       </div>
+  //     )
+  //   }
+  // SayHellow.propTypes = {
+  //     firstName: PropTypes.string.isRequired,
+  //     lastName: PropTypes.string.isRequired
+  // }
+  //   const ele1 = <SayHellow firstName={'itay'}/>
+  //   const element = (
+  //     <>
+  //     <Message>hellow</Message>
+  //     <Message>world</Message>
+  //       {ele1}
+  //     </>
+  //   )
+
+  // function tick() {
+  //   const time = new Date().toLocaleTimeString();
+  //   const element = (
+  //     <div>
+  //       <input value={time}/>
+  //     </div>
+  //   )
+  //   ReactDOM.render(element, root);
+  // }
+
+  // setInterval(tick,500);
+  //
+  // function CharacterCount({text}) {
+  //   const length = text.length ? text.length : 'No';
+  //   return(
+  //     <div>
+  //       {`The text "${text}" has `} <strong>{length}</strong> characters
+  //     </div>
+  //   )
+  // }
+  //
+  // const element =(
+  //   <>
+  //     <CharacterCount text="hellow world"/>
+  //     <CharacterCount text=""/>
+  //   </>
+  // )
+
+  // ReactDOM.render(element, root);
+
+  // function Box({className = '', style, size, ...rest}) {
+  //   const sizeClassName = size ? `box--${size}` : '';
+  //   return (
+  //     <div
+  //       className={`box ${sizeClassName} ${className}`}
+  //       style={{fontStyle: 'italic', ...style}}
+  //       {...rest}
+  //     />
+  //   )
+  // }
+  //
+  // const element = (
+  //   <div>
+  //     <Box
+  //       size="small"
+  //       style={{
+  //         backgroundColor: 'lightblue'
+  //       }}
+  //     >small lightblue box</Box>
+  //
+  //     <Box
+  //       className="box--medium"
+  //       style={{
+  //         backgroundColor: 'pink'
+  //       }}
+  //     >medium lightblue box</Box>
+  //
+  //     <Box
+  //       size="large"
+  //       style={{
+  //         backgroundColor: 'orange'
+  //       }}
+  //     >large lightblue box</Box>
+  //   </div>
+  // )
+
+  //   const state = {eventCount: 0, username: ''};
+  //
+  //   function handelClick() {
+  //     setState({eventCount: state.eventCount + 1})
+  //   }
+  //
+  //   function handleChange(event){
+  //     setState({username: event.target.value})
+  //   }
+  //
+  //   function App() {
+  //     return (
+  //       <div>
+  //         <p>There have been {state.eventCount} events.</p>
+  //         <p>
+  //           <button onClick={handelClick}>Click Me!</button>
+  //         </p>
+  //         <p>You typed : {state.username}</p>
+  //         <p>
+  //           <input onChange={handleChange}/>
+  //         </p>
+  //       </div>
+  //     )
+  //
+  //   }
+  //
+  //
+  //   function setState(newState) {
+  //     Object.assign(state, newState);
+  //     renderApp()
+  //   }
+  //
+  //   function renderApp() {
+  //     ReactDOM.render(<App/>, root)
+  //   }
+  // renderApp();
+
+  // function Greeting() {
+  //
+  //   function useLocalStorageState(key, defaultValue = '') {
+  //     const [state, setState] = React.useState(() => {
+  //       return window.localStorage.getItem(key) || defaultValue;
+  //     });
+  //     React.useEffect(() => {
+  //       console.log('greeting useEffect')
+  //       window.localStorage.setItem(key, state);
+  //     }, [key, state])
+  //
+  //     return [state, setState];
+  //   }
+  //
+  //   const [name, setName] = useLocalStorageState('name')
+  //
+  //
+  //   const handleChange = event => {
+  //     setName(event.target.value)
+  //   }
+  //
+  //   return (
+  //     <div>
+  //       <form>
+  //         <label htmlFor="name">Name :</label>
+  //         <input value={name} onChange={handleChange} id="name"/>
+  //       </form>
+  //       {name ? <strong>hellow {name}</strong> : 'Please enter your name'}
+  //     </div>
+  //   )
+  // }
+  //
+  // function App() {
+  //   const [count, setCount] = React.useState(0);
+  //   return (
+  //     <>
+  //       <button onClick={() => setCount(count => count + 1)}>{count}</button>
+  //       <Greeting/>
+  //     </>
+  //   )
+  // }
+
+  // function UsernameForm() {
+  //   const [username, setUsername] = React.useState('');
+  //   function handleSubmit(event) {
+  //     event.preventDefault();
+  //    // const username = document.getElementById('username')
+  //    // const username = event.target[1].value
+  //    //  const username = event.target.elements[0];
+  //    //  const username = event.target.elements.usernameInput.value
+  //    //  const username = usernameInputRef.current.value
+  //    //  console.dir(event.target.elements)
+  //    //  console.log(username);
+  //   }
+  //
+  //   function handleChange(event) {
+  //     setUsername(event.target.value.toLowerCase());
+  //   }
+  //
+  //   return(
+  //     <form onSubmit={handleSubmit}>
+  //       <div>
+  //         <label htmlFor="usernameInput">username :</label>
+  //         <input
+  //           onChange={handleChange}
+  //           value={username}
+  //           type="text"
+  //           id="usernameInput"/>
+  //       </div>
+  //
+  //       <button type="submit">Submit</button>
+  //     </form>
+  //   )
+  // }
+
+  //const ErrorBoundary = ReactErrorBoundary.ErrorBoundary;
+  // class ErrorBoundary extends React.Component {
+  //   state = {error: null};
+  //
+  //   static getDerivedStateFromError(error) {
+  //     return {error};
+  //   }
+  //
+  //   render() {
+  //     const {error} = this.state;
+  //
+  //     if (error) {
+  //     //  return <div>oh oh</div>
+  //       return <this.props.FallBackComponent error={error}/>
+  //     }
+  //
+  //     return this.props.children;
+  //   }
+  // }
+  //
+  // function ErrorFallback(error) {
+  //   return (
+  //     <div>
+  //       <p>Something went wrong</p>
+  //       <pre>{error.message}</pre>
+  //     </div>
+  //   )
+  // }
+  //
+  // function Bomb() {
+  //   throw new Error('error from bomb!');
+  // }
+  //
+  // function App() {
+  //   const [explode, setExplode] = React.useState(false);
+  //   return (
+  //     <div>
+  //       <div>
+  //         <button onClick={() => setExplode(true)}>Bomb</button>
+  //       </div>
+  //       <div>
+  //
+  //         <ErrorBoundary FallBackComponent={ErrorFallback}>{explode ? <Bomb/> : 'push the button'}</ErrorBoundary>
+  //
+  //       </div>
+  //     </div>
+  //   )
+  // }
+
+  const allItems = [
+    {id: 'a', value: "apple"},
+    {id: 'o', value: "orange"},
+    {id: 'g', value: "grape"},
+    {id: 'p', value: "peach"}
+  ]
+
+  function App() {
+    const [items, setItems] = React.useState(allItems);
+    function addItem() {
+      setItems([...items, allItems.find(item => !items.includes(item))]);
+    }
+
+
+    function removeItem(item) {
+      setItems(items.filter(i => i !== item));
+    }
+    return (
+      <div>
+
+        <button disabled={items.length >= allItems.length} onClick={addItem}>Add item</button>
+        <ul style={{listStyle: 'none', paddingLeft: 0}}>
+          {items.map(item => (
+            <li key={item.id}>
+              <button onClick={() => removeItem(item)}>remove</button>
+              <label htmlFor={`${item.value}-input`}>{item.value}</label>
+              <input id={`${item.value}-input`} defaultValue={item.value}/>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  ReactDOM.render(<App/>, root);
+
+</script>
+</body>
+</html>
+

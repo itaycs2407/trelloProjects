@@ -1,0 +1,242 @@
+{
+  "id": "formId",
+  "method": "GET",
+  "action": "./",
+  "submitText": "Submit",
+  "resetText": "Clear",
+  "header": "Welcome to form example!",
+  "section": [
+    {
+      "header": "Details",
+      "elements": [
+        {
+          "type": "input",
+          "attributes": {
+            "id": "firstname",
+            "required": true,
+            "type": "text",
+            "label": "First Name :",
+            "hint": "enter your first name"
+          }
+        },
+        {
+          "type": "input",
+          "attributes": {
+            "id": "lastname",
+            "required": true,
+            "type": "text",
+            "label": "Last Name :",
+            "hint": "enter your last name"
+          }
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "input",
+          "attributes": {
+            "id": "email",
+            "type": "email",
+            "label": "Email :",
+            "hint": "enter your email"
+          }
+        },
+        {
+          "type": "input",
+          "attributes": {
+            "id": "saveDetails",
+            "type": "checkbox",
+            "label": "save my details",
+            "checked": true,
+            "checkboxValue": true
+          }
+        },
+        {
+          "type": "input",
+          "attributes": {
+            "id": "subscribe",
+            "switch": true,
+            "type": "checkbox",
+            "label": "subscribe me to newsletter",
+            "checkboxValue": true
+          }
+        }
+      ]
+    },
+    {
+      "header": "Special details",
+      "elements": [
+        {
+          "type": "input",
+          "attributes": {
+            "id": "message",
+            "required": true,
+            "type": "text",
+            "label": "Message :",
+            "hint": "type something to send to server"
+          }
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "radio",
+          "attributes": {
+            "legend": "choose one option",
+            "name": "radioOption1",
+            "optionElements": [
+              {
+                "id": "radioId11",
+                "label": "radio 1 label",
+                "value": "radio 1"
+              },
+              {
+                "id": "radioId12",
+                "label": "radio 2 label",
+                "value": "radio 2",
+                "checked": true
+              },
+              {
+                "id": "radioId13",
+                "label": "radio 3 label",
+                "value": "radio 3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "radio",
+          "attributes": {
+            "legend": "choose one option",
+            "name": "radioOption2",
+            "optionElements": [
+              {
+                "id": "radioId21",
+                "label": "radio 1 label",
+                "value": true
+              },
+              {
+                "id": "radioId22",
+                "label": "radio 2 label",
+                "value": "radio 2"
+              },
+              {
+                "id": "radioId23",
+                "label": "radio 3 label",
+                "value": "radio 3"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "header": "Choose options",
+      "elements": [
+        {
+          "type": "dropdown",
+          "attributes": {
+            "id": "something1",
+            "hint": "choose something1",
+            "options": [
+              {
+                "name": "first",
+                "value": "first"
+              },
+              {
+                "name": "second",
+                "value": "second"
+              },
+              {
+                "name": "third",
+                "value": "third"
+              }
+            ]
+          }
+        },
+        {
+          "type": "dropdown",
+          "attributes": {
+            "id": "something2",
+            "hint": "choose something2",
+            "options": [
+              {
+                "name": "one",
+                "value": "one"
+              },
+              {
+                "name": "two",
+                "value": "two"
+              },
+              {
+                "name": "three",
+                "value": "three"
+              }
+            ]
+          }
+        },
+        {
+          "type": "dropdown",
+          "attributes": {
+            "id": "something3",
+            "hint": "choose something1",
+            "options": [
+              {
+                "name": "first",
+                "value": "first"
+              },
+              {
+                "name": "second",
+                "value": "second"
+              },
+              {
+                "name": "third",
+                "value": "third"
+              }
+            ]
+          }
+        },
+        {
+          "type": "dropdown",
+          "attributes": {
+            "id": "something4",
+            "hint": "choose something2",
+            "options": [
+              {
+                "name": "one",
+                "value": "one"
+              },
+              {
+                "name": "two",
+                "value": "two"
+              },
+              {
+                "name": "three",
+                "value": "three"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "elements": [
+        {
+          "type": "input",
+          "attributes": {
+            "id": "agree",
+            "type": "checkbox",
+            "label": "Agree to terms and conditions",
+            "checked": false,
+            "checkboxValue": true
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+

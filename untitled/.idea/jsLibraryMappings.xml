@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{@babel/standalone, prop-types, react, react-dom, react-dom.production, react-error-boundary}" />
+  </component>
+</project>
